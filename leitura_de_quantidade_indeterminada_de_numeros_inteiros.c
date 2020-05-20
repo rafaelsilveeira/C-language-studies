@@ -2,8 +2,15 @@
 #include <stdlib.h>
 
 /*
+1) LEITURA DE QUANTIDADE INDETERMINADA DE N√öMEROS INTEIROS
+Fa√ßa um algoritmo que:
+a) Leia uma quantidade indeterminada de n√∫meros inteiros (parar quando o usu√°rio digitar ‚Äò0‚Äô
+Zero)
+b) Apresente a soma dos valores √≠mpares, a quantidade de valores pares.
+c) Apresente o Maior valor e o Menor Valor. O zero (finalizador) N√ÉO deve ser considerado.
+
 CASOS DE TESTE
-ENTRADAS		MAIOR	MENOR	SOMAIMPAR	QUANTPAR
+ENTRADAS	MAIOR		MENOR		SOMAIMPAR		QUANTPAR
 12,14,17,5,0	17		5		22			2
 5,12,14,17,0	17		5		22			2
 17,14,12,5,0	17		5		22			2
@@ -20,28 +27,28 @@ int main(void)
     maior=0;
     menor=0;
     	 
-    do{ //Ler quantidade intederminadas de n˙meros.
+    do{ //Ler quantidade intederminadas de n√∫meros.
     printf("\nDigite um numero inteiro maior que zero. (para encerrar, digitar 0): ");
     scanf("%d",&numero);
     
-    if (numero%2!=0){ //se o n˙mero È Ìmpar, apresentar a soma dos valores
+    if (numero%2!=0){ //se o n√∫mero √© √≠mpar, apresentar a soma dos valores
         somaimpar=somaimpar+numero;
     } else if(numero==0){ //desconsiderar o zero na soma dos pares
-	} else{ //se o n˙mero for par, somar a quantidade de n˙meros pares
+	} else{ //se o n√∫mero for par, somar a quantidade de n√∫meros pares
         quantidadepar=quantidadepar+1;
     }
     
     //calcular o maior e menor valor, desconsiderando o zero.
-    if (maior==0 && menor==0 && numero>0){ //primeiro n˙mero digitado È maior e menor
+    if (maior==0 && menor==0 && numero>0){ //primeiro n√∫mero digitado √© maior e menor
     	maior=numero;
     	menor=numero;
-	}else if(numero>maior){ //se numero È maior que o anterior, assume a var maior
+	}else if(numero>maior){ //se numero √© maior que o anterior, assume a var maior
         maior=numero;
-    } else if(numero<menor && numero>0){ //senao se numero È menor que o anterior e maior que zero, assume a var menor
+    } else if(numero<menor && numero>0){ //senao se numero √© menor que o anterior e maior que zero, assume a var menor
 		menor=numero;
 	}
     
-    } while(numero!=0); //Encerrar quando o usu·rio digitar zero
+    } while(numero!=0); //Encerrar quando o usu√°rio digitar zero
     
     //apresentar os resultados
 	printf("\nMaior valor: %d",maior);
