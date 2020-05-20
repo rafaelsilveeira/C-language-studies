@@ -1,11 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+Escreva um programa que leia 6 valores int a,b,c,d,e,f
+a) criar 7 variáveis int e leia valores para cada uma. Mostre os endereços de memória
+ocupados por estas variáveis e os valores armazenados em cada uma.
+b) Escreva uma função que recebe como parâmetro os ponteiros para int A,B,C, D, E e
+F e retorne o ENDEREÇO da variável onde está armazenado o menor valor.
+c) Escreva uma função que recebe como parâmetro os ponteiros para int A,B,C, D, E e
+F e retorne a SOMA dos valores.
+d) Escreva uma função que recebe como parâmetro os valores int A,B,C, D, E e F e
+retorne o média dos valores.
+*/
+
 //funcao para registrar o endereco do numero armazenado de menor valor
 int* menorEndereco(int * a, int* b, int* c, int* d, int* e, int* f){
     int menor = *a; //variavel menor recebe o conteudo de a
     int *endereco=a;
-    if(*b<menor){ //verifica se o conteudo de b � menor
+    if(*b<menor){ //verifica se o conteudo de b é menor
         menor=*b;endereco=b;
     }
     if(*c<menor){
