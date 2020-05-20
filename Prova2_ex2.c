@@ -1,7 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Funcao para calcular a quantidade de �mpares na coluna indicada
+/*
+Fazer um programa que crie uma matriz 10 X 10 e efetue as
+seguintes operações:
+a) Inserir automaticamente os valores indicados abaixo, na matriz (isto é, o usuário
+não deve editar). Apresentar em tela a matriz,
+organizada em linhas e colunas;
+b) Crie uma função , que recebe como parâmetro a matriz e o índice de uma
+COLUNA. A função deve retornar o número de ELEMENTOS ÍMPARES da
+COLUNA indicada.
+c) Calcular e apresentar SOMA de todos os elementos PARES (usar repetição)
+d) Definir uma função que recebe uma matriz 10x10 como parâmetro e o número
+de uma LINHA ; a função deve calcular a MÉDIA DA LINHA indicada e retornar
+o valor. Usando esta função, apresentar a média da quinta linha;
+e) Definir função que recebe como parâmetro uma matriz 10x10 e um número.
+Essa função deve retornar a quantidade de elementos divisíveis pelo número
+recebido como parâmetro. Usando esta função, indique a quantidade de
+elementos divisíveis por 7;
+*/
+
+//Funcao para calcular a quantidade de ímpares na coluna indicada
 int imparColuna(int matriz[10][10],int col){
 	int qtdimpar=0, i;
 	
