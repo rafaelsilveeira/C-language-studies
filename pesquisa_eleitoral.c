@@ -2,6 +2,16 @@
 #include <stdlib.h>
 
 /* 
+Pesquisa Eleitoral: Escreva um programa que leia:
+● renda (inteiro: número de salários mínimos),
+● Voto para candidato, de acordo com a codificação (111 - Candidato A, 222 -
+Candidato B, 333 - Candidato C, 444 - Candidato D) para 10 pessoas.
+a) Leitura correta dos dados e uso de laço. Apresentar para cada entrevistado, os
+dados lidos; Apresentar o total de votos para cada candidato;
+b) Calcular quantos eleitores do Candidato B possuem renda maior que 5 salários;
+c) Calcular quantos eleitores do Candidato C possuem renda menor que 3 salários
+mínimos;
+
 CASOS DE TESTE
 RENDA		VOTO
 1			A
@@ -23,7 +33,7 @@ int main(int argc, char *argv[]) {
 	int i=0, renda, voto, votosA=0, votosB=0, votosC=0, votosD=0;
 	int rendaB=0, rendaC=0;
 	
-	do{ //la�o para regitrar votos, at� 10
+	do{ //laço para regitrar votos, até 10
 		printf("Digite a sua renda (em quantidade de salarios minimos): ");
 		scanf("%d",&renda); //registra a renda
 		
