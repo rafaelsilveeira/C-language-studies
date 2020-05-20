@@ -4,24 +4,28 @@
 int main(void)
 {
 /*
-11 = Candidata 1 
-22 = Candidata 2 
-33 =  Candidata 3 
-44 = Candidata 4 
-77 = voto em branco
+ELEIÇÃO PARA MISS RS
+Em uma eleição para Miss RS existem quatro candidatas. Os votos são informados através de
+códigos. Os dados utilizados para a contagem dos votos obedecem à seguinte codificação:
+● 11 = Candidata 1
+● 22 = Candidata 2
+● 33 = Candidata 3
+● 44 = Candidata 4
+● 77 = voto em branco
+● Qualquer número diferente de 0 = Voto Nulo
 
-Qualquer n�mero diferente de 0 = Voto Nulo
-Elabore um algoritmo que leia 10 c�digos da candidata que receber� o voto, at� a elei��o ser finalizada com o voto 0. 
-
-Escreva no final:
-Total de votos para cada candidata
-Percentual de VOTOS V�LIDOS* de cada candidata
-Total de votos nulos
-Total de votos em branco
+Elabore um algoritmo que leia 10 códigos da candidata que receberá o voto, até a eleição ser
+finalizada com o voto 0. Escreva no final:
+● Total de votos para cada candidata
+● Percentual de VOTOS VÁLIDOS* de cada candidata
+● Total de votos nulos
+● Total de votos em branco
+* Votos Válidos = Total de votos subtraídos os votos NULOS.
 */
+	
     int cod, totalvotos, cand1, cand2, cand3, cand4, branco, nulo;
     
-    //zerando as vari�veis de contagem
+    //zerando as variáveis de contagem
     cand1=0;
     cand2=0;
     cand3=0;
@@ -63,11 +67,11 @@ Total de votos em branco
                 printf("\nVoto computado: Em branco");
                 branco=branco+1; totalvotos=totalvotos+1; break;
             
-            case 0: // encerrar a vota��o
+            case 0: // encerrar a votação
                 printf("\nVotacao encerrada!");
                 cod=0; break; //variavel cod=0, para finalizar
             
-            default: //outros codigos resultam em voto nulo, somando 1 � variavel nulo
+            default: //outros codigos resultam em voto nulo, somando 1 à variavel nulo
                 printf("\nCodigo invalido. Voto nulo!");
                 nulo=nulo+1; break;
         }
@@ -75,16 +79,16 @@ Total de votos em branco
     } while(cod!=0); //encerra quando cod=0 (case 0)
     
     printf("\nTotal de votos da Candidata 1: %d",cand1); //imprime total de votos da candidata 1
-    printf("\nPercentual de votos validos da Candidata 1: %d%%\n",(cand1*100)/totalvotos); //calculo e impress�o da porcentagem
+    printf("\nPercentual de votos validos da Candidata 1: %d%%\n",(cand1*100)/totalvotos); //calculo e impressão da porcentagem
     
     printf("\nTotal de votos da Candidata 2: %d",cand2); //imprime total de votos da candidata 2
-    printf("\nPercentual de votos validos da Candidata 2: %d%%\n",(cand2*100)/totalvotos); //calculo e impress�o da porcentagem
+    printf("\nPercentual de votos validos da Candidata 2: %d%%\n",(cand2*100)/totalvotos); //calculo e impressão da porcentagem
     
     printf("\nTotal de votos da Candidata 3: %d",cand3); //imprime total de votos da candidata 3
-    printf("\nPercentual de votos validos da Candidata 3: %d%%\n",(cand3*100)/totalvotos); //calculo e impress�o da porcentagem
+    printf("\nPercentual de votos validos da Candidata 3: %d%%\n",(cand3*100)/totalvotos); //calculo e impressão da porcentagem
     
     printf("\nTotal de votos da Candidata 4: %d",cand4); //imprime total de votos da candidata 4
-    printf("\nPercentual de votos validos da Candidata 4: %d%%\n",(cand4*100)/totalvotos); //calculo e impress�o da porcentagem
+    printf("\nPercentual de votos validos da Candidata 4: %d%%\n",(cand4*100)/totalvotos); //calculo e impressão da porcentagem
     
     printf("\nTotal de votos em branco: %d (%d%%)\n",branco, (branco*100)/totalvotos); //imprime total de votos em branco (e percentual)
 
