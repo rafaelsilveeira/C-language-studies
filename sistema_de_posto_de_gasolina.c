@@ -1,32 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+/* 
+POSTO DE GASOLINA.
+O sistema de um posto de gasolina permite que o operador informe o produto de
+acordo com os c√≥digos:
+11 - Gasolina Comum (R$4,30);
+22 - Gasolina Aditivada (R$4,60);
+33 - Gasolina Premium (R$5,30).
+Ap√≥s escolher o produto o usu√°rio deve informar a quantidade em litros comprada.
+Informar ao usu√°rio o total a ser pago.
+Finalmente, o operador deve informar se o valor foi pago em dinheiro (c√≥digo 88) ou
+cart√£o (c√≥digo 99).
+O programa deve ler uma quantidade indefinida de opera√ß√µes at√© que seja
+informado o c√≥digo de produto 0 (zero). Ap√≥s o encerramento o programa deve
+informar o total de litros vendidos de cada produto, o total de dinheiro no caixa, o
+total em cart√£o e o total geral.
+*/
 
 int main(int argc, char *argv[]) {
-	//DeclaraÁ„o de vari·veis
+	//Declara√ß√£o de vari√°veis
 	int produto, pagamento, cartao, dinheiro;
 	float preco, quant_litro, litro_comum, litro_aditivada, litro_premium, total_compra, total_dinheiro, total_cartao, total_geral;
 	
-	//iniciar as vari·veis de c·lculo
+	//iniciar as vari√°veis de c√°lculo
 	litro_comum=0; litro_aditivada=0; litro_premium=0;
 	total_dinheiro=0; total_cartao=0; total_geral=0;
 	
-	//apresentar cÛdigo dos produtos ao usu·rio
+	//apresentar c√≥digo dos produtos ao usu√°rio
 	printf("****************************");
 	printf("\n11 - Gasolina Comum (R%$ 4,30)");
 	printf("\n22 - Gasolina Aditivada (R%$ 4,60)");
 	printf("\n33 - Gasolina Premium (R%$ 5,30)");
 	printf("\n****************************\n");
 	
-	//laÁo de repetiÁ„o atÈ que seja digitado zero, para finalizar
+	//la√ßo de repeti√ß√£o at√© que seja digitado zero, para finalizar
 	do{
-		//solicitar entrada do usu·rio
+		//solicitar entrada do usu√°rio
 		printf("\nDigite o codigo do produto: ");
 		scanf("%d",&produto);
 		
 
-		//verificar entrada do usu·rio e atribuir preÁo ao produto		
+		//verificar entrada do usu√°rio e atribuir pre√ßo ao produto		
 		switch(produto){
 			case 11: preco=4.30; break;
 			case 22: preco=4.60; break;
@@ -35,7 +50,7 @@ int main(int argc, char *argv[]) {
 			default: break;
 		}
 		
-		//se o cÛdigo digitado for v·lido, solicitar quantidade
+		//se o c√≥digo digitado for v√°lido, solicitar quantidade
 		if (preco!=0){
 			printf("Digite a quantidade, em litros: ");
 			scanf("%f",&quant_litro);
@@ -52,9 +67,9 @@ int main(int argc, char *argv[]) {
 			total_compra = preco*quant_litro;
 			printf("Total da compra: %.2f", total_compra);
 			
-			//laÁo para verificar a forma de pagamento e repetir se o cÛdigo digitado for inv·lido
+			//la√ßo para verificar a forma de pagamento e repetir se o c√≥digo digitado for inv√°lido
 			do{
-				printf("\nForma de pagamento (dinheiro - cod. 88) ou (cart„o - cod. 99):");
+				printf("\nForma de pagamento (dinheiro - cod. 88) ou (cart√£o - cod. 99):");
 				scanf("%d",&pagamento);
 				
 				//verificar a forma de pagamento e armazenar o valor da compra na respectiva forma (dinheiro ou cartao)
@@ -63,12 +78,12 @@ int main(int argc, char *argv[]) {
 					case 99: total_cartao=total_cartao+total_compra; total_geral=total_geral+total_compra; break;
 					default: pagamento=0; printf("Cod. invalido. Informe novamente.");
 				}
-			}while(pagamento==0); //fim do laÁo da forma de pagamento
+			}while(pagamento==0); //fim do la√ßo da forma de pagamento
 		}
 		
-	}while(preco!=0); //fim do laÁo de entrada de produtos e finalizaÁ„o do programa
+	}while(preco!=0); //fim do la√ßo de entrada de produtos e finaliza√ß√£o do programa
 	
-	//apresentar resultados de venda durante operaÁ„o
+	//apresentar resultados de venda durante opera√ß√£o
 	printf("\nGasolina Comum: %.2f litros", litro_comum);
 	printf("\nGasolina Aditivada: %.2f litros", litro_aditivada);
 	printf("\nGasolina Premium: %.2f litros", litro_premium);
